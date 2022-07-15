@@ -17,7 +17,7 @@ from sample_config import Config
 
 # the Strings used for this "thing"
 from translation import Translation
-from pyrogram import Client as Clinton
+from pyrogram import Client as Naruto
 from pyrogram import filters
 from database.adduser import AddUser
 from pyrogram.types import Message
@@ -26,7 +26,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-@Clinton.on_message(filters.private & filters.command(["help"]))
+@Naruto.on_message(filters.private & filters.command(["help"]))
 async def help_user(bot, update):
     await AddUser(bot, update)
     await bot.send_message(
@@ -38,7 +38,7 @@ async def help_user(bot, update):
     )
 
 
-@Clinton.on_message(filters.private & filters.command(["start"]))
+@Naruto.on_message(filters.private & filters.command(["start"]))
 async def start(bot, message):
   await bot.send_message(
     chat_id=message.chat.id,
@@ -46,8 +46,8 @@ async def start(bot, message):
     reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Comment", url="https://t.me/TMWAD/18"),
-                    InlineKeyboardButton("🤖 Updates", url="https://t.me/TMWAD")
+                    InlineKeyboardButton("Comment", url="https://t.me/"),
+                    InlineKeyboardButton("🤖 Updates", url="https://t.me/")
                 ]
             ]
         ),
