@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | Modified By > @DC4_WARRIOR
+# (c) Shrimadhav U K | Modified By > @Minato
 
 
-from pyrogram import Client as Clinton
+from pyrogram import Client as Naruto
 from plugins.youtube_dl_button import youtube_dl_call_back
 from plugins.dl_button import ddl_call_back
 
-@Clinton.on_callback_query()
+@Naruto.on_callback_query()
 async def button(bot, update):
 
     cb_data = update.data
